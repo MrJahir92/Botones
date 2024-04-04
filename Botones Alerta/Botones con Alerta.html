@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <title>Botones con Imágenes y Alertas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="button-container">
+        <button class="center-button" onclick="mostrarImagenYAlerta(this.value, 'A.jpeg')" value="Boton A">Botón A</button>
+        <button class="top-button" onclick="mostrarImagenYAlerta(this.value, 'B.jpeg')" value="Boton B">Botón B</button>
+    </div>
+    <div class="button-container">
+        <button class="left-button" onclick="mostrarImagenYAlerta(this.value, 'C.jpeg')" value="Boton C">Botón C</button>
+        <button class="right-button" onclick="mostrarImagenYAlerta(this.value, 'D.jpeg')" value="Boton D">Botón D</button>
+        
+    </div>
+    <br><br>
+    <img id="imagen" src="" alt="Imagen" style="display: block; margin: auto;">
+
+    <title>Capturar y Mostrar Datos en la Página</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <label for="capturarDatos">Captura tus datos:</label>
+    <input type="text" id="capturarDatos" oninput="mostrarDatos(this.value)">
+    <div id="output"></div>
+
+    <script>
+        function mostrarDatos(valor) {
+            // Obtener el div de salida
+            var outputDiv = document.getElementById("output");
+           
+            // Mostrar los datos ingresados en el mismo párrafo
+            outputDiv.textContent = "Datos ingresados: " + valor;
+        }
+    </script>
+</body>
+</html>

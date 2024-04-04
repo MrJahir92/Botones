@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar y Mostrar Datos en la Página</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <label for="capturarDatos">Captura tus datos:</label>
+    <input type="text" id="capturarDatos" oninput="mostrarDatos(this.value)">
+    <div id="output"></div>
+
+    <script>
+        function mostrarDatos(valor) {
+            // Obtener el div de salida
+            var outputDiv = document.getElementById("output");
+           
+            // Mostrar los datos ingresados en el mismo párrafo
+            outputDiv.textContent = "Datos ingresados: " + valor;
+        }
+    </script>
+</body>
+</html>
